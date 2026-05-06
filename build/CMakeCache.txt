@@ -21,10 +21,10 @@ APPLICATION_BINARY_DIR:PATH=/home/sugavelan/zephyrproject/button_press_driver/bu
 APPLICATION_SOURCE_DIR:PATH=/home/sugavelan/zephyrproject/button_press_driver
 
 //Selected board
-BOARD:STRING=native_sim
+BOARD:STRING=esp32_devkitc_wroom
 
 //Path to a file.
-BOARD_DIR:PATH=/home/sugavelan/zephyrproject/zephyr/boards/posix/native_sim
+BOARD_DIR:PATH=/home/sugavelan/zephyrproject/zephyr/boards/xtensa/esp32_devkitc_wroom
 
 //Support board extensions
 BOARD_EXTENSIONS:BOOL=ON
@@ -32,11 +32,14 @@ BOARD_EXTENSIONS:BOOL=ON
 //Path to a program.
 BOSSAC:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/bin/bossac
 
+//Kernel binary file
+BYPRODUCT_KERNEL_BIN_NAME:FILEPATH=/home/sugavelan/zephyrproject/button_press_driver/build/zephyr/zephyr.bin
+
 //Kernel elf file
 BYPRODUCT_KERNEL_ELF_NAME:FILEPATH=/home/sugavelan/zephyrproject/button_press_driver/build/zephyr/zephyr.elf
 
 //Selected board
-CACHED_BOARD:STRING=native_sim
+CACHED_BOARD:STRING=esp32_devkitc_wroom
 
 //If desired, you can build the application usingthe configuration
 // settings specified in an alternate .conf file using this parameter.
@@ -57,21 +60,24 @@ CACHED_SNIPPET:STRING=
 CCACHE_FOUND:FILEPATH=/usr/bin/ccache
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
+CMAKE_ADDR2LINE:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-addr2line
 
 //Path to a program.
-CMAKE_AR:FILEPATH=/usr/bin/ar
+CMAKE_AR:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-ar
+
+//Path to a program.
+CMAKE_AS:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-as
 
 //ASM compiler
-CMAKE_ASM_COMPILER:FILEPATH=/usr/bin/gcc
+CMAKE_ASM_COMPILER:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_ASM_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar
+CMAKE_ASM_COMPILER_AR:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ar
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_ASM_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib
+CMAKE_ASM_COMPILER_RANLIB:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ranlib
 
 //Flags used by the ASM compiler during all build types.
 CMAKE_ASM_FLAGS:STRING=
@@ -93,15 +99,15 @@ CMAKE_ASM_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_BUILD_TYPE:STRING=
 
 //CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/gcc
+CMAKE_CXX_COMPILER:STRING=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
+CMAKE_CXX_COMPILER_AR:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ar
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ranlib
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -119,15 +125,15 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/gcc
+CMAKE_C_COMPILER:STRING=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-13
+CMAKE_C_COMPILER_AR:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ar
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-13
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gcc-ranlib
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -170,10 +176,13 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/sugavelan/zephyrproject/button_press_driver/build/CMakeFiles/pkgRedirects
 
 //Path to a program.
-CMAKE_GCOV:FILEPATH=/usr/bin/gcov
+CMAKE_GCOV:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/aarch64-zephyr-elf/bin/aarch64-zephyr-elf-gcov
 
 //Path to a program.
-CMAKE_GDB:FILEPATH=CMAKE_GDB-NOTFOUND
+CMAKE_GDB:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gdb
+
+//Path to a program.
+CMAKE_GDB_NO_PY:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-gdb
 
 //Install path prefix, prepended onto install directories.
 CMAKE_INSTALL_PREFIX:PATH=/usr/local
@@ -202,13 +211,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=/usr/bin/nm
+CMAKE_NM:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-nm
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
+CMAKE_OBJCOPY:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-objcopy
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
+CMAKE_OBJDUMP:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-objdump
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -235,10 +244,10 @@ CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
+CMAKE_RANLIB:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-ranlib
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=/usr/bin/readelf
+CMAKE_READELF:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-readelf
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -288,7 +297,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=/usr/bin/strip
+CMAKE_STRIP:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/xtensa-espressif_esp32_zephyr-elf-strip
 
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
@@ -309,26 +318,17 @@ DTC:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr
 // dts2.overlay"
 DTC_OVERLAY_FILE:STRING=/home/sugavelan/zephyrproject/button_press_driver/app.overlay
 
-//Path to a program.
-GNULD_LINKER:FILEPATH=/usr/bin/ld.bfd
-
-//Linker BFD compatibility (inferred from binary)
+//Linker BFD compatibility (compiler reported)
 GNULD_LINKER_IS_BFD:BOOL=ON
 
 //GNU ld version
-GNULD_VERSION_STRING:STRING=2.42
+GNULD_VERSION_STRING:STRING=2.38
 
 //Path to a program.
 GPERF:FILEPATH=/usr/bin/gperf
 
 //Path to a program.
 IMGTOOL:FILEPATH=IMGTOOL-NOTFOUND
-
-//Path to a program.
-MAKE:FILEPATH=/usr/bin/make
-
-//Path to the native simulator
-NSI_DIR:PATH=/home/sugavelan/zephyrproject/zephyr/scripts/native_simulator
 
 //Path to a program.
 OPENOCD:FILEPATH=/home/sugavelan/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
@@ -349,7 +349,10 @@ Picolibc_IS_TOP_LEVEL:STATIC=OFF
 Picolibc_SOURCE_DIR:STATIC=/home/sugavelan/zephyrproject/modules/lib/picolibc
 
 //True if toolchain supports newlib
-TOOLCHAIN_HAS_NEWLIB:BOOL=OFF
+TOOLCHAIN_HAS_NEWLIB:BOOL=ON
+
+//True if toolchain supports picolibc
+TOOLCHAIN_HAS_PICOLIBC:BOOL=ON
 
 //Zephyr toolchain root
 TOOLCHAIN_ROOT:STRING=/home/sugavelan/zephyrproject/zephyr
@@ -367,7 +370,7 @@ ZEPHYR_GIT_INDEX:PATH=/home/sugavelan/zephyrproject/zephyr/.git/index
 ZEPHYR_SDK_INSTALL_DIR:PATH=/home/sugavelan/zephyr-sdk-0.17.0
 
 //Zephyr toolchain variant
-ZEPHYR_TOOLCHAIN_VARIANT:STRING=host
+ZEPHYR_TOOLCHAIN_VARIANT:STRING=zephyr
 
 //Value Computed by CMake
 Zephyr-Kernel_BINARY_DIR:STATIC=/home/sugavelan/zephyrproject/button_press_driver/build
@@ -517,7 +520,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=108
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=119
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -565,7 +568,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Dtc
 FIND_PACKAGE_MESSAGE_DETAILS_Dtc:INTERNAL=[/home/sugavelan/zephyr-sdk-0.17.0/sysroots/x86_64-pokysdk-linux/usr/bin/dtc][v1.6.0(1.4.6)]
 //Details about finding GnuLd
-FIND_PACKAGE_MESSAGE_DETAILS_GnuLd:INTERNAL=[/usr/bin/ld.bfd][v2.42()]
+FIND_PACKAGE_MESSAGE_DETAILS_GnuLd:INTERNAL=[/home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/bin/../lib/gcc/xtensa-espressif_esp32_zephyr-elf/12.2.0/../../../../xtensa-espressif_esp32_zephyr-elf/bin/ld.bfd][v2.38()]
 //Details about finding Python3
 FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/sugavelan/.local/share/pipx/venvs/west/bin/python][cfound components: Interpreter ][v3.12.3(3.8)]
 //West

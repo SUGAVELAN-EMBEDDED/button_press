@@ -1,17 +1,13 @@
 zephyr/linker_zephyr_pre0.cmd: \
+  /home/sugavelan/zephyr-sdk-0.17.0/xtensa-espressif_esp32_zephyr-elf/lib/gcc/xtensa-espressif_esp32_zephyr-elf/12.2.0/include/stdbool.h \
   zephyr/include/generated/autoconf.h \
   zephyr/include/generated/devicetree_generated.h \
   zephyr/include/generated/offsets.h \
   zephyr/include/generated/snippets-data-sections.ld \
-  zephyr/include/generated/snippets-noinit.ld \
   zephyr/include/generated/snippets-ram-sections.ld \
   zephyr/include/generated/snippets-rodata.ld \
-  zephyr/include/generated/snippets-rom-start.ld \
   zephyr/include/generated/snippets-rwdata.ld \
   zephyr/include/generated/snippets-sections.ld \
-  /home/sugavelan/zephyrproject/zephyr/include/zephyr/arch/posix/linker.ld \
-  /home/sugavelan/zephyrproject/zephyr/include/zephyr/arch/posix/native_sim_interface.ld \
-  /home/sugavelan/zephyrproject/zephyr/include/zephyr/arch/posix/native_tasks.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/devicetree.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/devicetree/can.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/devicetree/clocks.h \
@@ -26,7 +22,6 @@ zephyr/linker_zephyr_pre0.cmd: \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/devicetree/reset.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/devicetree/spi.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-ram.ld \
-  /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom/common-rom-bt.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom/common-rom-cpp.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom/common-rom-debug.ld \
@@ -35,11 +30,16 @@ zephyr/linker_zephyr_pre0.cmd: \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom/common-rom-misc.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom/common-rom-net.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/common-rom/common-rom-ztest.ld \
+  /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/cplusplus-ram.ld \
+  /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/cplusplus-rom.ld \
+  /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/debug-sections.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/device-deps.ld \
+  /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/intlist.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/iterable_sections.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/linker-defs.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/linker-tool-gcc.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/linker-tool.h \
+  /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/rel-sections.ld \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/section_tags.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/linker/sections.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/sys/mem_manage.h \
@@ -55,6 +55,5 @@ zephyr/linker_zephyr_pre0.cmd: \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/toolchain.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/toolchain/common.h \
   /home/sugavelan/zephyrproject/zephyr/include/zephyr/toolchain/gcc.h \
-  /home/sugavelan/zephyrproject/zephyr/soc/posix/inf_clock/linker.ld \
-  /usr/include/stdc-predef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h
+  /home/sugavelan/zephyrproject/zephyr/soc/xtensa/espressif_esp32/esp32/default.ld \
+  /home/sugavelan/zephyrproject/zephyr/soc/xtensa/espressif_esp32/esp32/linker.ld
