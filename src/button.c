@@ -37,16 +37,24 @@ static void button_work_handler(struct k_work *work)
     int current_state = gpio_pin_get_dt(&button);
     int now = k_uptime_get();
 
-    /* PRESS */
+    /* BUTTON PRESS */
     if (current_state && !last_state) {
+
         press_time = now;
+
+        /* Fresh press */
+        long_press_handled = 0;
     }
 
-    /* RELEASE */
+    /* BUTTON RELEASE */
     if (!current_state && last_state) {
-        release_time = now;
-        click_count++;
-        long_press_handled = 0;
+
+        /* Count click only if long press did NOT happen */
+        if (!long_press_handled) {
+
+            release_time = now;
+            click_count++;
+        }
     }
 
     last_state = current_state;
